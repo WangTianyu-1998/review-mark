@@ -1,0 +1,41 @@
+{
+  "name": "review-mark",
+  "version": "0.0.1",
+  "description": "A CLI tool for AI-powered code review using git diff.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "belink-review": "dist/cli/review.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/cli/review.js"
+  },
+  "keywords": [
+    "ai",
+    "code-review",
+    "cli",
+    "git",
+    "diff"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.59.0",
+    "commander": "^12.0.0"
+  }
+}
